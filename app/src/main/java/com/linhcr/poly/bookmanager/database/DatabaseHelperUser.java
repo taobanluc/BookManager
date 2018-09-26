@@ -12,7 +12,7 @@ import com.linhcr.poly.bookmanager.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class DatabaseHelperUser extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "user_db";
     public static final int DATABASE_VERSION = 1;
@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_PASSWORD = "password";
     private Context context;
 
-    public DatabaseHelper(Context context) {
+    public DatabaseHelperUser(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }

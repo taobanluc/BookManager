@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
         <activity
-            android:name=".DangNhap"
+            android:name=".DangNhapActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GiaoDienChinh" />
-        <activity android:name=".ThemNguoiDung" />
-        <activity android:name=".QuanLiNguoiDung" />
-        <activity android:name=".ThemSach" />
-        <activity android:name=".QuanLiSach" />
-        <activity android:name=".ThemTheLoai" />
-        <activity android:name=".QuanLiTheLoai"></activity>
+        <activity android:name=".GiaoDienChinhActivity" />
+        <activity android:name=".ThemNguoiDungActivity" />
+        <activity android:name=".QuanLiNguoiDungActivity" />
+        <activity android:name=".ThemSachActivity" />
+        <activity android:name=".QuanLiSachActivity" />
+        <activity android:name=".ThemTheLoaiActivity" />
+        <activity android:name=".QuanLiTheLoaiActivity"></activity>
     </application>
 
 </manifest>

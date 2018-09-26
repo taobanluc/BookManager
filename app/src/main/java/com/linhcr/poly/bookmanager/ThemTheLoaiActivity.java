@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class ThemTheLoai extends AppCompatActivity {
+public class ThemTheLoaiActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,12 +14,12 @@ public class ThemTheLoai extends AppCompatActivity {
     }
 
     public void ShowDanhSachTheLoai(View view) {
-        Intent intent = new Intent(ThemTheLoai.this, QuanLiTheLoai.class);
+        Intent intent = new Intent(ThemTheLoaiActivity.this, QuanLiTheLoaiActivity.class);
         startActivity(intent);
     }
 
     public void CloseTheLoai(View view) {
-        Intent intent = new Intent(ThemTheLoai.this, GiaoDienChinh.class);
+        Intent intent = new Intent(ThemTheLoaiActivity.this, GiaoDienChinhActivity.class);
         startActivity(intent);
     }
 }

@@ -8,14 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.linhcr.poly.bookmanager.database.DatabaseHelper;
+import com.linhcr.poly.bookmanager.database.DatabaseHelperUser;
 import com.linhcr.poly.bookmanager.model.User;
 
 import java.util.List;
 
-public class ThemNguoiDung extends AppCompatActivity {
+public class ThemNguoiDungActivity extends AppCompatActivity {
     private List<User> list;
-    private DatabaseHelper databaseHelper;
+    private DatabaseHelperUser databaseHelper;
     private EditText edtAddUserName;
     private EditText edtAddPassword;
     private EditText edtAddName;
@@ -27,19 +27,19 @@ public class ThemNguoiDung extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_them_nguoi_dung);
-        databaseHelper = new DatabaseHelper(this);
+        databaseHelper = new DatabaseHelperUser(this);
         intiView();
         initActions();
 
     }
 
     public void CloseNguoiDung(View view) {
-        Intent intent = new Intent(ThemNguoiDung.this, GiaoDienChinh.class);
+        Intent intent = new Intent(ThemNguoiDungActivity.this, GiaoDienChinhActivity.class);
         startActivity(intent);
     }
 
     public void ShowDanhSachNguoiDung(View view) {
-        Intent intent = new Intent(ThemNguoiDung.this, QuanLiNguoiDung.class);
+        Intent intent = new Intent(ThemNguoiDungActivity.this, QuanLiNguoiDungActivity.class);
         startActivity(intent);
     }
 
@@ -66,7 +66,7 @@ public class ThemNguoiDung extends AppCompatActivity {
                 User user = databaseHelper.getUser(userName);
 
                 if (user != null) {
-                    Toast.makeText(ThemNguoiDung.this, getString(R.string.da_ton_tai),
+                    Toast.makeText(ThemNguoiDungActivity.this, getString(R.string.da_ton_tai),
                             Toast.LENGTH_SHORT).show();
                 } else{
                     User user1 = new User();
@@ -77,7 +77,7 @@ public class ThemNguoiDung extends AppCompatActivity {
 
                     databaseHelper.insertUser(user1);
 
-                    Toast.makeText(ThemNguoiDung.this, "Đã thêm người dùng", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ThemNguoiDungActivity.this, "Đã thêm người dùng", Toast.LENGTH_SHORT).show();
                 }
             }
         });

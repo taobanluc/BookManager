@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class ThemSach extends AppCompatActivity {
+public class ThemSachActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,12 +14,12 @@ public class ThemSach extends AppCompatActivity {
     }
 
     public void ShowDanhSachSach(View view) {
-        Intent intent = new Intent(ThemSach.this, QuanLiSach.class);
+        Intent intent = new Intent(ThemSachActivity.this, QuanLiSachActivity.class);
         startActivity(intent);
     }
 
     public void CloseSach(View view) {
-        Intent intent = new Intent(ThemSach.this, GiaoDienChinh.class);
+        Intent intent = new Intent(ThemSachActivity.this, GiaoDienChinhActivity.class);
         startActivity(intent);
     }
 }

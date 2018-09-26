@@ -14,12 +14,12 @@ import com.linhcr.poly.bookmanager.model.User;
 
 import java.util.List;
 
-public class CustomAdapterUser extends ArrayAdapter<User> {
+public class UserAdapter extends ArrayAdapter<User> {
     private Context context;
     private int resource;
     private List<User> listUser;
 
-    public CustomAdapterUser(@NonNull Context context, int resource, @NonNull List<User> objects) {
+    public UserAdapter(@NonNull Context context, int resource, @NonNull List<User> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;
@@ -42,8 +42,8 @@ public class CustomAdapterUser extends ArrayAdapter<User> {
             viewHolder = (ViewHolder)convertView.getTag();
         }
         User user = listUser.get(position);
-        viewHolder.tvName.setText(user.getName());
-        viewHolder.tvPhone.setText(user.getPhone_number());
+        viewHolder.tvPhone.setText(user.getName());
+        viewHolder.tvName.setText(user.getPhone_number());
 
             return convertView;
     }

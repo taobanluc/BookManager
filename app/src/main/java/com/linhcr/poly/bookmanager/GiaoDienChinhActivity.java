@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class GiaoDienChinh extends AppCompatActivity {
+public class GiaoDienChinhActivity extends AppCompatActivity {
     private ImageView imgNguoiDung;
     private ImageView imgTheLoai;
     private ImageView imgSach;
@@ -30,18 +30,18 @@ public class GiaoDienChinh extends AppCompatActivity {
 
     public void ShowNguoiDung(View view) {
 
-        Intent intent = new Intent(GiaoDienChinh.this, ThemNguoiDung.class);
+        Intent intent = new Intent(GiaoDienChinhActivity.this, ThemNguoiDungActivity.class);
         startActivity(intent);
     }
 
 
     public void ShowTheLoai(View view) {
-        Intent intent = new Intent(GiaoDienChinh.this, ThemTheLoai.class);
+        Intent intent = new Intent(GiaoDienChinhActivity.this, ThemTheLoaiActivity.class);
         startActivity(intent);
     }
 
     public void ShowSach(View view) {
-        Intent intent = new Intent(GiaoDienChinh.this, ThemSach.class);
+        Intent intent = new Intent(GiaoDienChinhActivity.this, ThemSachActivity.class);
         startActivity(intent);
     }
 

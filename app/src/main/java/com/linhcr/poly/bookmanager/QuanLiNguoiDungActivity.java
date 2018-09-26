@@ -4,27 +4,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.linhcr.poly.bookmanager.adapter.CustomAdapterUser;
-import com.linhcr.poly.bookmanager.database.DatabaseHelper;
+import com.linhcr.poly.bookmanager.adapter.UserAdapter;
+import com.linhcr.poly.bookmanager.database.DatabaseHelperUser;
 import com.linhcr.poly.bookmanager.model.User;
 
 import java.util.List;
 
-public class QuanLiNguoiDung extends AppCompatActivity {
+public class QuanLiNguoiDungActivity extends AppCompatActivity {
     private ListView lvQuanLiNguoiDung;
     private List<User> userList;
-    private CustomAdapterUser customAdapterUser;
-    private DatabaseHelper databaseHelper;
+    private UserAdapter userAdapter;
+    private DatabaseHelperUser databaseHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quan_li_nguoi_dung);
 
         lvQuanLiNguoiDung = (ListView) findViewById(R.id.lvQuanLiNguoiDung);
-        databaseHelper = new DatabaseHelper(this);
+        databaseHelper = new DatabaseHelperUser(this);
         userList = databaseHelper.getAllUser();
 
-        customAdapterUser = new CustomAdapterUser(this,R.layout.item_nguoi_dung,userList);
-        lvQuanLiNguoiDung.setAdapter(customAdapterUser);
+        userAdapter = new UserAdapter(this,R.layout.item_nguoi_dung,userList);
+        lvQuanLiNguoiDung.setAdapter(userAdapter);
     }
 }

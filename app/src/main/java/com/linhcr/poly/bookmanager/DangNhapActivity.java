@@ -11,14 +11,14 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.linhcr.poly.bookmanager.database.DatabaseHelper;
+import com.linhcr.poly.bookmanager.database.DatabaseHelperUser;
 import com.linhcr.poly.bookmanager.model.User;
 
-public class DangNhap extends AppCompatActivity {
+public class DangNhapActivity extends AppCompatActivity {
     private EditText edtUserName, edtPassWord;
     private Button btnSignIn;
     private CheckBox cbRememberPassword;
-    private DatabaseHelper databaseHelper;
+    private DatabaseHelperUser databaseHelper;
 
 
     @Override
@@ -26,7 +26,7 @@ public class DangNhap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        databaseHelper = new DatabaseHelper(this);
+        databaseHelper = new DatabaseHelperUser(this);
         initViews();
 
 
@@ -61,17 +61,17 @@ public class DangNhap extends AppCompatActivity {
                     User user = databaseHelper.getUser(userName);
 
                     if (user == null) {
-                        Toast.makeText(DangNhap.this, getString(R.string.notify_username_password),
+                        Toast.makeText(DangNhapActivity.this, getString(R.string.notify_username_password),
                                 Toast.LENGTH_SHORT).show();
                     } else {
                         String passwordData = user.getPass_word();
 
                         if (passwordData.equals(password)) {
-                            Intent cc = new Intent(DangNhap.this, GiaoDienChinh.class);
+                            Intent cc = new Intent(DangNhapActivity.this, GiaoDienChinhActivity.class);
                             startActivity(cc);
                             finish();
                         }else {
-                            Toast.makeText(DangNhap.this,getString(R.string.notify_username_password), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DangNhapActivity.this,getString(R.string.notify_username_password), Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -88,7 +88,7 @@ public class DangNhap extends AppCompatActivity {
     }
 
 
-//                Intent intent = new Intent(DangNhap.this, GiaoDienChinh.class);
+//                Intent intent = new Intent(DangNhapActivity.this, GiaoDienChinhActivity.class);
 //                startActivity(intent);
             }
 

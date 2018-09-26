@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#9FFF56"
     android:orientation="vertical"
-    tools:context=".GiaoDienChinh">
+    tools:context=".GiaoDienChinhActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
