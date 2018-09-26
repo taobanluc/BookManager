@@ -14,12 +14,12 @@ import com.linhcr.poly.bookmanager.model.User;
 
 import java.util.List;
 
-public class CustomAdapter extends ArrayAdapter<User> {
+public class CustomAdapterUser extends ArrayAdapter<User> {
     private Context context;
     private int resource;
     private List<User> listUser;
 
-    public CustomAdapter(@NonNull Context context, int resource, @NonNull List<User> objects) {
+    public CustomAdapterUser(@NonNull Context context, int resource, @NonNull List<User> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;

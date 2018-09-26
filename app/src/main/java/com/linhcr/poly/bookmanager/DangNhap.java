@@ -31,13 +31,13 @@ public class DangNhap extends AppCompatActivity {
 
 
 
-//        User user = new User();
-//        user.setUser_name("taobanluc");
-//        user.setName("LinhCR");
-//        user.setPass_word("thuathithoi");
-//        user.setPhone_number("01666271387");
-//
-//        databaseHelper.insertUser(user);
+        User user = new User();
+        user.setUser_name("linhcr123");
+        user.setName("linh ");
+        user.setPass_word("linhcr123");
+        user.setPhone_number("01666271387");
+
+        databaseHelper.insertUser(user);
 
         btnSignIn.setOnClickListener(new OnClickListener() {
             @Override
