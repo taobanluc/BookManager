@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9FFF56"
+    android:orientation="vertical"
+    tools:context=".ThemSach">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1DB500"
+        app:title="Thêm Sách"
+        app:titleTextColor="#fff">
+
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:id="@+id/edtMaSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Mã Sách"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/edtTenSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Tên Sách"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/edtSoLuong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Số lượng"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/edtGia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Giá"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/edtTheLoaiSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Thể Loại "
+        android:textColorHint="#fff" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnThemSach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="#66E811"
+            android:text="Thêm"
+            android:textAllCaps="false"
+            android:textColor="#250EF8" />
+
+        <Button
+            android:id="@+id/btnHuySach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:background="#66E811"
+            android:onClick="CloseSach"
+            android:text="Hủy"
+            android:textAllCaps="false"
+            android:textColor="#250EF8" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDanhSachSach"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#66E811"
+        android:onClick="ShowDanhSachSach"
+        android:text="Danh Sách Sách"
+        android:textAllCaps="false"
+        android:textColor="#250EF8" />
+
+</LinearLayout>

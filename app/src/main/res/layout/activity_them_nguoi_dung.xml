@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9FFF56"
+    android:orientation="vertical"
+    tools:context=".ThemNguoiDung">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/poly" />
+
+    <EditText
+        android:id="@+id/edtAddUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="UserName"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/edtAddPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/edtAddName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Name"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/edtAddSoDienThoai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Số điện thoại"
+        android:textColorHint="#fff" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <Button
+            android:id="@+id/btnThemNguoiDung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="#66E811"
+            android:text="Thêm"
+            android:onClick="AddNguoidung"
+            android:textAllCaps="false"
+            android:textColor="#250EF8" />
+
+        <Button
+            android:id="@+id/btnHuyNguoiDung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:background="#66E811"
+            android:onClick="CloseNguoiDung"
+            android:text="Hủy"
+            android:textAllCaps="false"
+            android:textColor="#250EF8" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDanhSachNguoiDung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="10dp"
+        android:background="#66E811"
+        android:onClick="ShowDanhSachNguoiDung"
+        android:text="Danh Sách Người Dùng"
+        android:textAllCaps="false"
+        android:textColor="#250EF8" />
+
+
+</LinearLayout>

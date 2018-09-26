@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9FFF56"
+    android:orientation="vertical"
+    tools:context=".ThemTheLoai">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1DB500"
+        app:title="Thêm Thể Loại"
+        app:titleTextColor="#fff">
+
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:id="@+id/edtMaTheLoai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:hint="Mã Thể Loại" />
+
+    <EditText
+        android:id="@+id/edtTenTheLoai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:hint="Tên Thể Loại" />
+
+    <EditText
+        android:id="@+id/edtViTri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:hint="Vị Trí" />
+
+    <EditText
+        android:id="@+id/edtMoTa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:hint="Mô Tả" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnThemTheLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="#66E811"
+            android:text="Thêm"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnHuyTheLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:background="#66E811"
+            android:onClick="CloseTheLoai"
+            android:text="Hủy"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDanhSachTheLoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp"
+        android:background="#66E811"
+        android:onClick="ShowDanhSachTheLoai"
+        android:text="Danh Sách Thể Loại"
+        android:textAllCaps="false" />
+</LinearLayout>
