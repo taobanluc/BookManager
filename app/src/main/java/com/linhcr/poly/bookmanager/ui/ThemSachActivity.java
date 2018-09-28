@@ -1,9 +1,11 @@
-package com.linhcr.poly.bookmanager;
+package com.linhcr.poly.bookmanager.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.linhcr.poly.bookmanager.R;
 
 public class ThemSachActivity extends AppCompatActivity {
 

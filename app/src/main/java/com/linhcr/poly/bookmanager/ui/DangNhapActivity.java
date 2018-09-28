@@ -1,4 +1,4 @@
-package com.linhcr.poly.bookmanager;
+package com.linhcr.poly.bookmanager.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.linhcr.poly.bookmanager.R;
 import com.linhcr.poly.bookmanager.database.DatabaseHelperUser;
 import com.linhcr.poly.bookmanager.model.User;
 
