@@ -29,7 +29,10 @@
         <activity android:name=".ui.ThemSachActivity" />
         <activity android:name=".ui.QuanLiSachActivity" />
         <activity android:name=".ui.ThemTheLoaiActivity" />
-        <activity android:name=".ui.QuanLiTheLoaiActivity"></activity>
+        <activity android:name=".ui.QuanLiTheLoaiActivity" />
+        <activity android:name=".ui.ThemHoaDonActivity" />
+        <activity android:name=".ui.QuanLiHoaDonActivity" />
+        <activity android:name=".ui.ThongKeActivity"></activity>
     </application>
 
 </manifest>
