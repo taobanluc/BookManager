@@ -3,20 +3,22 @@ package com.linhcr.poly.bookmanager.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.linhcr.poly.bookmanager.R;
-import com.linhcr.poly.bookmanager.database.DatabaseHelperUser;
+import com.linhcr.poly.bookmanager.database.DatabaseHelper;
+import com.linhcr.poly.bookmanager.databasedao.UserDAO;
 import com.linhcr.poly.bookmanager.model.User;
 
 import java.util.List;
 
 public class ThemNguoiDungActivity extends AppCompatActivity {
     private List<User> list;
-    private DatabaseHelperUser databaseHelper;
+    private DatabaseHelper databaseHelper;
     private EditText edtAddUserName;
     private EditText edtAddPassword;
     private EditText edtAddName;
@@ -24,11 +26,13 @@ public class ThemNguoiDungActivity extends AppCompatActivity {
     private Button btnThemNguoiDung;
     private Button btnHuyNguoiDung;
     private Button btnDanhSachNguoiDung;
+    private UserDAO userDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_them_nguoi_dung);
-        databaseHelper = new DatabaseHelperUser(this);
+        databaseHelper = new DatabaseHelper(this);
+        userDAO = new UserDAO(databaseHelper);
         intiView();
         initActions();
 
@@ -63,8 +67,8 @@ public class ThemNguoiDungActivity extends AppCompatActivity {
                 String password = edtAddPassword.getText().toString().trim();
                 String name = edtAddName.getText().toString().trim();
                 String phone = edtAddSoDienThoai.getText().toString().trim();
-
-                User user = databaseHelper.getUser(userName);
+                Log.e("Username", userName);
+                User user = userDAO.getUser(userName);
 
                 if (user != null) {
                     Toast.makeText(ThemNguoiDungActivity.this, getString(R.string.da_ton_tai),
@@ -76,7 +80,7 @@ public class ThemNguoiDungActivity extends AppCompatActivity {
                     user1.setName(name);
                     user1.setPhone_number(phone);
 
-                    databaseHelper.insertUser(user1);
+                    userDAO.insertUser(user1);
 
                     Toast.makeText(ThemNguoiDungActivity.this, "Đã thêm người dùng", Toast.LENGTH_SHORT).show();
                 }

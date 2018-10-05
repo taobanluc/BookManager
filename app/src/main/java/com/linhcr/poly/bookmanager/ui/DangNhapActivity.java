@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,14 +13,18 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.linhcr.poly.bookmanager.R;
-import com.linhcr.poly.bookmanager.database.DatabaseHelperUser;
+import com.linhcr.poly.bookmanager.database.DatabaseHelper;
+import com.linhcr.poly.bookmanager.databasedao.UserDAO;
 import com.linhcr.poly.bookmanager.model.User;
+
+import java.util.List;
 
 public class DangNhapActivity extends AppCompatActivity {
     private EditText edtUserName, edtPassWord;
     private Button btnSignIn;
     private CheckBox cbRememberPassword;
-    private DatabaseHelperUser databaseHelper;
+    private DatabaseHelper databaseHelper;
+    private UserDAO userDAO;
 
 
     @Override
@@ -27,18 +32,29 @@ public class DangNhapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        databaseHelper = new DatabaseHelperUser(this);
+        databaseHelper = new DatabaseHelper(this);
+        userDAO = new UserDAO(databaseHelper);
         initViews();
 
+//        User user = new User();
+//        user.setUser_name("admin123");
+//        user.setPass_word("123456789");
+//        user.setName("linh1");
+//        user.setPhone_number("1234567");
+//
+//        userDAO.insertUser(user);
+
+//        Kiểm tra xem đã add nhưng user nào
+//        List<User> userList = userDAO.getAllUser();
+//        for (int i = 0; i < userList.size() ; i++) {
+//            Log.e("Username", userList.get(i).getUser_name());
+//            Log.e("Pass", userList.get(i).getPass_word());
+//
+//        }
 
 
-        User user = new User();
-        user.setUser_name("linhcr123");
-        user.setName("linh ");
-        user.setPass_word("linhcr123");
-        user.setPhone_number("01666271387");
 
-        databaseHelper.insertUser(user);
+
 
         btnSignIn.setOnClickListener(new OnClickListener() {
             @Override
@@ -59,7 +75,7 @@ public class DangNhapActivity extends AppCompatActivity {
                     }
                 } else {
 
-                    User user = databaseHelper.getUser(userName);
+                    User user = userDAO.getUser(userName);
 
                     if (user == null) {
                         Toast.makeText(DangNhapActivity.this, getString(R.string.notify_username_password),

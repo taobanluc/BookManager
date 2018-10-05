@@ -60,7 +60,6 @@
             android:layout_marginLeft="50dp"
             android:background="#66E811"
             android:text="Thêm"
-            android:onClick="AddNguoidung"
             android:textAllCaps="false"
             android:textColor="#250EF8" />
 

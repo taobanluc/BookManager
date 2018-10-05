@@ -19,9 +19,10 @@ public class User {
     }
 
     public User(String name, String phone_number, String pass_word) {
+        this.pass_word = pass_word;
         this.name = name;
         this.phone_number = phone_number;
-        this.pass_word = pass_word;
+
     }
 
     public User(){

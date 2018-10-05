@@ -26,4 +26,9 @@
     <string name="action_settings">Settings</string>
     <string name="notify_username_password">Sai tài khoản hoặc mật khẩu</string>
     <string name="da_ton_tai">Đã tồn tại</string>
+    <string name="action_delete">Xóa</string>
+    <string name="message_confirm_delete_user">Bạn có muốn xóa</string>
+    <string name="action_no">Không</string>
+    <string name="action_yes">Có</string>
+    <string name="toast_deleted_successfully">Đã xóa</string>
 </resources>
